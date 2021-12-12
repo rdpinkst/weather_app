@@ -11,7 +11,7 @@ const city = document.querySelector('#city');
 
 
 function getWeather(location, measure) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${measure}&appid=${WEATHER}`, { mode: 'cors' })
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${measure}&appid=${WEATHER}`, { mode: 'cors' })
         .then(function (response) {
             return response.json();
         })
