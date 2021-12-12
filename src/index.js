@@ -31,8 +31,7 @@ function getWeather(location, measure) {
 
 btnUnit.addEventListener('click', (e) => {
     let units = e.target.textContent;
-    e.preventDefault();
-    
+
     if(units === `F`){
         e.target.textContent = `C`;
         unitMeasure = 'metric';
@@ -42,6 +41,7 @@ btnUnit.addEventListener('click', (e) => {
         unitMeasure = 'imperial';
         getWeather(cityVariable, unitMeasure);
     }
+    e.preventDefault();
 })
 
 getWeather(cityVariable, unitMeasure);
@@ -51,6 +51,7 @@ btnCity.addEventListener('click', (e) => {
         getWeather(cityVariable, unitMeasure)
         city.value = '';
     }
+    e.preventDefault();
 })
 
 
